@@ -1,0 +1,23 @@
+img.size1{
+    height: 25vh;
+    width: auto;
+    transition: transform 0.3s ease, cursor 0.3s ease;
+    cursor: url('magnifier-icon.png'), auto; /* magnifier icon when hovering */
+}
+
+img.size2{
+    height: 32vh;
+    width: auto;
+    transition: transform 0.3s ease, cursor 0.3s ease;
+    cursor: url('magnifier-icon.png'), auto; /* magnifier icon when hovering */
+}
+  
+.zoomed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2); /* Center and scale up */
+    z-index: 1000;
+    cursor: url('magnifier-out-icon.png'), auto; /* Different cursor when zoomed */
+}
+  

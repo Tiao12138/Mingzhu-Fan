@@ -1,0 +1,454 @@
+/* ===== 单栏项目页排版（p2-1 及后续同类页面用） ===== */
+.project-single {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #444444;
+    text-align: left;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 2.5rem;
+}
+
+.project-text {
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.bigtitle{
+    font-size: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    opacity: 0.25;
+    z-index: 0;
+    position: sticky;
+}
+
+.figure-caption {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    position: sticky;
+    opacity: 0.3;
+    top: 0; 
+    z-index: 0; 
+}
+
+.smallcaption{
+    margin-top: 0rem;
+    color: #999999;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+.titleover{
+    background-color: #E2DFD8;
+    width: 24%;
+    padding: 2rem;
+    margin-top: 14rem;
+    margin-left: 4vw;
+    position: absolute;
+}
+
+.pros {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    color: #444444;
+    padding: 1.25rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    margin-bottom: 0.25rem;
+    text-align: left;
+    height: auto;
+    font-size: 1.25rem;
+  }
+
+.col0{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    column-gap: 2%; 
+    row-gap: 1rem;
+    margin-top: 2.5rem;
+    padding-right: 2vw;
+    color: #444444;
+    width: 68vw;
+    text-align: left;
+    margin-bottom: 2.5rem;
+}
+
+.col1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    margin-top: 2.5rem;
+    color: #444444;
+    width: 25vw;
+    text-align: left;
+    font-size: 1rem;
+}
+
+img.col1pic{ 
+    width: 100%;
+    height: auto;
+}
+
+.graphic1 {
+  width: 20rem;       /* 固定宽度 */
+  height: auto;       /* 高度自动，防止变形 */
+  display: block;     /* 避免 inline 元素带来的对齐问题 */
+  flex-shrink: 0;     /* 防止 Flexbox 缩小它 */
+}
+
+.col2{
+    margin-left: 1vw;
+    margin-top: 1rem;
+    color: #444444;
+    width: 35vw;
+    padding-left: 0rem;
+    text-align: left;
+}
+
+.col3{
+    margin-top: 2rem;
+    color: #444444;
+    width: 15vw;
+    padding-left: 1vw;
+    text-align: left;
+    margin-right: 0;
+}
+
+.col4{
+    margin-top: 2.5rem;
+    color: #444444;
+    width: 30vw;
+    padding-left: 1vw;
+    text-align: left;
+    margin-right: 0;
+}
+
+.col5{
+    margin-left: 1vw;
+    margin-top: 1rem;
+    border-top: 3px solid #F17136;
+    color: #444444;
+    width: 15vw;
+    padding-left: 0rem;
+    text-align: left;
+}
+
+.col6{
+    margin-left: 1vw;
+    margin-top: 1rem;
+    color: #444444;
+    width: 15vw;
+    padding-left: 0rem;
+    text-align: left;
+}
+
+.col7{
+    margin-top: 1rem;
+    color: #444444;
+    width: 20vw;
+    padding-left: 0rem;
+    text-align: left;
+}
+
+.col8{
+    margin-left: 3vw;
+    margin-top: 1rem;
+    color: #444444;
+    width: 40vw;
+    padding-left: 0rem;
+    text-align: left;
+}
+
+.col8-1{
+    margin-top: 2rem;
+    color: #444444;
+    width: 60vw;
+    padding-left: 1vw;
+    text-align: left;
+    margin-right: 0;
+}
+
+.col8-2 {
+    margin-top: 2rem;
+    color: #444444;
+    width: 22vw;
+    padding-left: 1vw;
+    text-align: left;
+    margin-left: auto; /* Pushes the column to the right */
+    margin-right: 0; /* Ensures no space on the right */
+    border-top: 1px solid #444444;
+}
+
+img.smallpic{
+    width: 16vw;
+    height: auto;
+}
+
+.largequote{
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+}
+
+#scrollable-column {
+    width: 100%; 
+    overflow: hidden;
+    background-color: #e9eff2;
+    white-space: nowrap; 
+    cursor: grab;
+    overflow-x: scroll;
+}
+
+#scrollable-column.active {
+    cursor: grabbing;
+}
+
+.scrollcontent {
+    display: flex;
+    width: 2800px; 
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    height: 50rem;
+    border-left: 1px solid #999999;
+    text-align: left;
+    width: fit-content;
+}
+
+.blocktop1 {
+    display: inline-block;
+    height: 25rem;
+    padding-right: 2rem;
+    border-bottom: 3px solid #7176D2;
+}
+
+.blocktop2 {
+    display: inline-block;
+    height: 25rem;
+    padding-right: 1rem;
+    border-bottom: 3px solid #FFC108;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FFC108;
+}
+
+.blocklow {
+    display: inline-block;
+    height: 25rem;
+    /* border-top: 3px solid #7176D2; */
+    overflow-y: scroll;
+    width: 100%;
+    font-size: 1rem;
+    padding-top: 4px;
+}
+
+img.gallery {
+    height: 18rem;
+    width: auto;
+    margin-right: 1rem;
+    margin-top: 7rem;
+}
+
+img.zoomsize1{
+    height: 25vh;
+    width: auto;
+    transition: transform 0.3s ease, cursor 0.3s ease;
+    cursor: url('magnifier-icon.png'), auto; /* magnifier icon when hovering */
+}
+
+img.zoomsize2{
+    height: 32vh;
+    width: auto;
+    margin-top: 1rem;
+    transition: transform 0.3s ease, cursor 0.3s ease;
+    cursor: url('magnifier-icon.png'), auto; 
+}
+  
+.zoomed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2); 
+    z-index: 1000;
+    cursor: url('magnifier-out-icon.png'), auto; 
+}
+
+.accordion{
+    width: 70vw;
+}
+
+.accordion-header {
+    font-weight: bold;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    cursor: pointer;
+}
+
+.accordion-header:hover {
+    color: #7176D2;
+}
+  
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-item {
+    margin: 0.5vh 0;
+}  
+
+.accordion-title{
+    font-style: italic;
+    font-size: 1.15rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #666666;
+}
+  
+.icon-arrow {
+    font-size: 1.15rem;
+    user-select: none;
+    color: #666666;
+    margin-left: 0.5vw;
+}
+
+.icon-arrow:hover {
+    color: #b8bae0;
+}
+  
+.accordion-item.open .accordion-content {
+    max-height: 100px; 
+}
+  
+.accordion-item.open .icon-arrow {
+    content: "▲";
+}
+img.nuuk {
+    width: 21vw;
+    height: 28vw;
+    margin-right: 1vw;
+}
+
+img.cards{
+    width: 17vw;
+    height: auto;
+}
+
+/* ===== 响应式断点：窄屏下把并排多栏改成上下堆叠 =====
+   适用于老的多栏项目详情页系统（.col0 ~ .col8-2）。
+   新建的项目页如果用 .project-single（单栏模板）本身已经是 100% 宽，不受影响。 */
+@media (max-width: 768px) {
+  .col0, .col1, .col2, .col3, .col4, .col5, .col6, .col7,
+  .col8, .col8-1, .col8-2,
+  .profilecol, .sidenote, .intro, .presenttext,
+  .piv, .future, .accordion, .p1image {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 1rem !important;
+    box-sizing: border-box;
+  }
+
+  img.col1pic, img.smallpic, img.nuuk, img.cards,
+  .graphic1 {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* ===== 横向拖拽滑动画廊（比如 social post 合集、motion 素材）=====
+   桌面上一次露出约 2-3 个卡片，其余靠拖动/滑动查看。
+   用法：外层 .h-scroll-wrap > .h-scroll，里面放若干 .h-scroll-card */
+.h-scroll-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.h-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  cursor: grab;
+  padding-bottom: 2.5rem; /* 给滚动条留点空间，不贴着卡片 */
+  -webkit-overflow-scrolling: touch;
+}
+
+.h-scroll.active {
+  cursor: grabbing;
+}
+
+.h-scroll-card {
+  flex: 0 0 auto; /* 宽度不再写死百分比，由横竖版规则决定 */
+  scroll-snap-align: start;
+}
+
+.h-scroll-card video,
+.h-scroll-card img {
+  display: block;
+  border-radius: 4px;
+  background-color: #eee;
+  object-fit: contain;
+  height: 19rem; /* 默认值：JS 判断出方向之前的占位，避免加载时页面跳动 */
+  width: auto;
+}
+
+/* 宽大于高：固定高度，宽度跟着视频原比例自动算 */
+.h-scroll-card.landscape video,
+.h-scroll-card.landscape img {
+  height: 19rem;
+  width: auto;
+  max-width: 90vw; /* 只是极端保险，正常情况下不会触发，避免出现比例被压扁露灰边 */
+}
+
+/* 高大于宽：固定宽度，高度跟着视频原比例自动算 */
+.h-scroll-card.portrait video,
+.h-scroll-card.portrait img {
+  width: 16rem;
+  height: auto;
+  max-height: 32rem; /* 同上，放宽保险线，避免比例被压扁露灰边 */
+}
+
+.h-scroll-caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+@media (max-width: 768px) {
+  .h-scroll-card.landscape video,
+  .h-scroll-card.landscape img {
+    height: 13rem;
+    max-width: 90vw;
+  }
+  .h-scroll-card.portrait video,
+  .h-scroll-card.portrait img {
+    width: 11rem;
+    max-height: 22rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .h-scroll-card.landscape video,
+  .h-scroll-card.landscape img {
+    height: 9.5rem;
+    max-width: 90vw;
+  }
+  .h-scroll-card.portrait video,
+  .h-scroll-card.portrait img {
+    width: 9rem;
+    max-height: 18rem;
+  }
+}
