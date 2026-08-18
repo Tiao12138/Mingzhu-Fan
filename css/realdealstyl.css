@@ -447,7 +447,8 @@ a:hover{
   text-decoration: none;
 }
 
-.iw-thumb img {
+.iw-thumb img,
+.iw-thumb video {
   width: 12rem;
   height: auto;
   display: block;
@@ -455,7 +456,8 @@ a:hover{
   transition: filter 0.2s ease;
 }
 
-.iw-thumb:hover img {
+.iw-thumb:hover img
+.iw-thumb:hover video {
   filter: brightness(0.85);
 }
 
