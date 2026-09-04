@@ -256,35 +256,31 @@ img.present1{
   justify-content: flex-start;  
   align-items: flex-start;  
   flex-wrap: wrap;  
-  column-gap: 1.5%; 
-  row-gap: 1.5%; 
+  column-gap: 1%;      /* 原 1.5% → 1%，间隔略微收紧 */
+  row-gap: 1%;          /* 同上 */
   margin-top: 0.25rem;
   margin-left: 0.3rem;
 }
 
 .box {
   flex: 1 1 auto; 
-  /* width: auto;  
-  height: auto;   */
   display: inline-block;
   margin-top: 0rem;
   justify-content: center;
   align-items: flex-start;
   overflow: hidden;  
-  max-width: 31%;  
+  max-width: 36%;       /* 原 31% → 36% */
   max-height: 34rem; 
 }
 
 .box2 {
   flex: 1 1 auto; 
-  /* width: auto;  
-  height: auto;   */
   display: inline-block;
   margin-top: 0rem;
   justify-content: center;
   align-items: flex-start;
   overflow: hidden;  
-  max-width: 22%;  
+  max-width: 26%;       /* 原 22% → 26% */
   max-height: 35rem; 
 }
 
