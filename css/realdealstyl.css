@@ -256,8 +256,8 @@ img.present1{
   justify-content: flex-start;  
   align-items: flex-start;  
   flex-wrap: wrap;  
-  column-gap: 1%;      /* 原 1.5% → 1%，间隔略微收紧 */
-  row-gap: 1%;          /* 同上 */
+  column-gap: 1%;      
+  row-gap: 1%;          
   margin-top: 0.25rem;
   margin-left: 0.3rem;
 }
@@ -269,7 +269,7 @@ img.present1{
   justify-content: center;
   align-items: flex-start;
   overflow: hidden;  
-  max-width: 36%;       /* 原 31% → 36% */
+  max-width: 36%;       
   max-height: 34rem; 
 }
 
@@ -288,6 +288,7 @@ img.present1{
   position: static;
   margin: 0;
   padding: 0.75rem 1rem 0rem 1.6rem; 
+  font-size: 0.8rem; 
   font-weight: 600;
   color: #444444;
   background-color: #fff;
@@ -362,8 +363,6 @@ img.cover:hover .hovertext {
     font-size: 0.875rem; 
 }
 
-  /* æ‰‹æœºç«¯æ”¶ç´§å·¦å³ç•™ç™½ï¼Œè…¾å‡ºæ›´å¤šå¯ç”¨å®½åº¦ï¼›
-     åŒæ—¶ä¿æŒ category0 / hover-text-container / row ä¸‰è€…å·¦è¾¹ç¼˜å¯¹é½ */
   .contentsec, .contentsec-scroll .contentsec {
     padding-left: 0.4rem;
     padding-right: 0.4rem;
