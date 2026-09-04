@@ -467,3 +467,21 @@ a:hover{
     width: 40%;
   }
 }
+
+/* ===== About Me 页面排版微调 ===== */
+.section-label {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.resume-meta {
+  color: #666666;
+  line-height: 1.5;
+}
+
+.pronoun {
+  font-style: italic;
+  color: #888888;
+  font-size: 0.8rem;
+}
