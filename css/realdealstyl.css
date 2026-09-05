@@ -333,8 +333,8 @@ img.cover:hover {
   visibility: hidden;
   opacity: 0;
   color: #666666;
-  font-size: 1.125rem;
-  margin-top: 1.25rem;
+  font-size: 0.25rem;
+  margin-top: 0.25rem;
   position: relative;
   z-index: 1;
   font-size: 1rem;
