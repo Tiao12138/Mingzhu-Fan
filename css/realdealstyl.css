@@ -15,7 +15,6 @@ body {
   flex-direction: column;
 }
 
-/* Ã©Â¡Â¶Ã©Æ’Â¨Ã¥Â¯Â¼Ã¨Ë†Âª + hover Ã¨Â¯Â´Ã¦ËœÅ½Ã¦â€“â€¡Ã¥Â­â€”Ã¯Â¼Å¡Ã¥Â¸Â¸Ã©Â©Â»Ã¤Â¸ÂÃ¦Â»Å¡Ã¥Å Â¨ */
 .site-header {
   position: relative;
   flex-shrink: 0;
@@ -23,7 +22,6 @@ body {
   z-index: 10;
 }
 
-/* Ã¥ÂÂªÃ¦Å“â€°Ã¨Â¿â„¢Ã¤Â¸ÂªÃ¥Å’ÂºÃ¥Å¸Å¸Ã¯Â¼Ë†Ã§Â¼Â©Ã§â€¢Â¥Ã¥â€ºÂ¾Ã¥Â¢â„¢Ã¯Â¼â€°Ã¨â€¡ÂªÃ¥Â·Â±Ã¦Â»Å¡Ã¥Å Â¨ */
 .contentsec-scroll {
   flex: 1 1 auto;
   overflow-y: auto;
@@ -286,17 +284,21 @@ img.present1{
 }
 
 .hover-text-container {
-  position: static;
+  position: absolute;      /* 关键：脱离文档流 */
+  top: 100%;                /* 紧贴在 nav 行下方 */
+  left: 0;
+  right: 0;
   margin: 0;
-  padding: 2.75rem 1rem 0rem 1.6rem; 
-  font-size: 1.5rem; 
+  padding: 0.5rem 1rem 0rem 1.6rem;  /* 原来的 2.75rem 顶部padding不再需要，因为已经在nav下方了 */
+  font-size: 1.5rem;
   font-weight: 500;
   color: #444444;
   background-color: #fff;
-  min-height: 1.75rem; 
-  visibility: hidden; /* Initially hidden */
+  min-height: 1.75rem;
+  visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.3s ease-in-out; /* Smooth transition */
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+  pointer-events: none;    /* 避免遮住下面内容时挡住鼠标事件 */
 }
 
 .hover-text-container.show {
