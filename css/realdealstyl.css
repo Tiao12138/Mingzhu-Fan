@@ -88,7 +88,7 @@ p {
 .projects-columns {
   display: grid;
   grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-  align-items: start;
+  align-items: stretch;
   column-gap: 1.25rem;
   margin: 0.25rem 0.3rem 2rem;
 }
