@@ -573,3 +573,44 @@ a:hover {
     gap: 0.5rem;
   }
 }
+
+.video-feature {
+  display: grid;
+  grid-template-columns: 24rem minmax(0, 48rem);
+  align-items: center;
+  gap: 3rem;
+
+  width: min(100%, 75rem); /* 24rem 视频 + 48rem 文字 + 3rem 间距 */
+  margin: 3rem auto;       /* 整个视频与文字组合居中 */
+}
+
+.video-feature .video-large {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.video-feature-text {
+  max-width: 48rem;
+  color: #444444;
+}
+
+.video-feature-text p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .video-feature {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .video-feature .video-large {
+    width: 100%;
+  }
+
+  .video-feature-text {
+    max-width: none;
+  }
+}
