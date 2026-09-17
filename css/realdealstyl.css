@@ -586,11 +586,11 @@ a:hover {
 }
 
 .video-feature--small {
-  grid-template-columns: 24rem minmax(0, 48rem);
+  grid-template-columns: 24rem minmax(0, 28rem);
 }
 
 .video-feature--medium {
-  grid-template-columns: 32rem minmax(0, 40rem);
+  grid-template-columns: 32rem minmax(0, 24rem);
 }
 
 .video-feature .video-large {
