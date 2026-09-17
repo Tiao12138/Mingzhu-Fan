@@ -579,7 +579,18 @@ a:hover {
   align-items: center;
   gap: 3rem;
 
-  margin: 2rem auto;       /* 整个视频与文字组合居中 */
+  width: 75rem;
+  max-width: calc(100% - 2rem);
+  margin: 3rem auto;
+  align-self: center; /* 强制在 .project-single 内整体居中 */
+}
+
+.video-feature--small {
+  grid-template-columns: 24rem minmax(0, 48rem);
+}
+
+.video-feature--medium {
+  grid-template-columns: 32rem minmax(0, 40rem);
 }
 
 .video-feature .video-large {
@@ -588,20 +599,8 @@ a:hover {
   margin: 0;
 }
 
-.video-feature--small {
-  grid-template-columns: 24rem minmax(0, 32rem);
-  width: min(100%, 75rem);
-}
-
-.video-feature--medium {
-  grid-template-columns: 32rem minmax(0, 24rem);
-  width: min(100%, 75rem);
-}
-
 .video-feature-text {
-  max-width: 28rem;
-  font-size: 1rem;
-  color: #444444;
+  max-width: 100%;
 }
 
 .video-feature-text p {
@@ -609,17 +608,12 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .video-feature {
+  .video-feature,
+  .video-feature--small,
+  .video-feature--medium {
     grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
     gap: 1rem;
-    width: 100%;
-  }
-
-  .video-feature .video-large {
-    width: 100%;
-  }
-
-  .video-feature-text {
-    max-width: none;
   }
 }
