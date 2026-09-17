@@ -564,7 +564,8 @@ a:hover {
 .image-trio img {
   display: block;
   width: 100%;
-  height: auto;                 /* 保留 9:16 原比例 */
+  height: auto; 
+  border-radius: 4px;                /* 保留 9:16 原比例 */
 }
 
 @media (max-width: 768px) {
