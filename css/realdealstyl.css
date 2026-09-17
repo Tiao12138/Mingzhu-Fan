@@ -580,7 +580,6 @@ a:hover {
   align-items: center;
   gap: 3rem;
 
-  width: 75rem;
   max-width: calc(100% - 2rem);
   margin: 2rem auto;
   align-self: center; /* 强制在 .project-single 内整体居中 */
@@ -588,10 +587,14 @@ a:hover {
 
 .video-feature--small {
   grid-template-columns: 24rem minmax(0, 28rem);
+  width: 54rem;
+
 }
 
 .video-feature--medium {
-  grid-template-columns: 32rem minmax(0, 24rem);
+  grid-template-columns: 32rem minmax(0, 20rem);
+  width: 54rem;
+
 }
 
 .video-feature .video-large {
