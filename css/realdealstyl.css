@@ -555,11 +555,10 @@ a:hover {
 .image-trio {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-
+  gap: 0.75rem;
   width: 100%;                 /* 三张图合计占满屏幕宽度 */
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .image-trio img {
