@@ -605,6 +605,7 @@ a:hover {
 
 .video-feature-text {
   max-width: 100%;
+  font-size: 1rem;
 }
 
 .video-feature-text p {
