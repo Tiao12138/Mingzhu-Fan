@@ -1,10 +1,11 @@
 /* ===== 单栏项目页排版（p2-1 及后续同类页面用） ===== */
 .project-single {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    color: #444444;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: auto;      /* 不要用 100% */
+  min-width: 0;
+  color: #444444;
+  text-align: left;
 }
 
 .project-image {
@@ -368,87 +369,3 @@ img.cards{
   }
 }
 
-/* ===== 横向拖拽滑动画廊（比如 social post 合集、motion 素材）=====
-   桌面上一次露出约 2-3 个卡片，其余靠拖动/滑动查看。
-   用法：外层 .h-scroll-wrap > .h-scroll，里面放若干 .h-scroll-card */
-.h-scroll-wrap {
-  width: 100%;
-  overflow: hidden;
-}
-
-.h-scroll {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  scroll-snap-type: x proximity;
-  cursor: grab;
-  padding-bottom: 2.5rem; /* 给滚动条留点空间，不贴着卡片 */
-  -webkit-overflow-scrolling: touch;
-}
-
-.h-scroll.active {
-  cursor: grabbing;
-}
-
-.h-scroll-card {
-  flex: 0 0 auto; /* 宽度不再写死百分比，由横竖版规则决定 */
-  scroll-snap-align: start;
-}
-
-.h-scroll-card video,
-.h-scroll-card img {
-  display: block;
-  border-radius: 4px;
-  background-color: #eee;
-  object-fit: contain;
-  height: 19rem; /* 默认值：JS 判断出方向之前的占位，避免加载时页面跳动 */
-  width: auto;
-}
-
-/* 宽大于高：固定高度，宽度跟着视频原比例自动算 */
-.h-scroll-card.landscape video,
-.h-scroll-card.landscape img {
-  height: 19rem;
-  width: auto;
-  max-width: 90vw; /* 只是极端保险，正常情况下不会触发，避免出现比例被压扁露灰边 */
-}
-
-/* 高大于宽：固定宽度，高度跟着视频原比例自动算 */
-.h-scroll-card.portrait video,
-.h-scroll-card.portrait img {
-  width: 16rem;
-  height: auto;
-  max-height: 32rem; /* 同上，放宽保险线，避免比例被压扁露灰边 */
-}
-
-.h-scroll-caption {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #666666;
-}
-
-@media (max-width: 768px) {
-  .h-scroll-card.landscape video,
-  .h-scroll-card.landscape img {
-    height: 13rem;
-    max-width: 90vw;
-  }
-  .h-scroll-card.portrait video,
-  .h-scroll-card.portrait img {
-    width: 11rem;
-    max-height: 22rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .h-scroll-card.landscape video,
-  .h-scroll-card.landscape img {
-    height: 9.5rem;
-    max-width: 90vw;
-  }
-  .h-scroll-card.portrait video,
-  .h-scroll-card.portrait img {
-    width: 9rem;
-    max-height: 18rem;
-  }
-}

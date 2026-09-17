@@ -83,6 +83,10 @@ p {
   font-size: 1.125rem;
 }
 
+.project-single {
+  margin: 0 0.25rem 0 0.25rem;
+}
+
 /* ===== Selected projects homepage =====
    Put each project-card in either column. The two columns do not align by rows. */
 .projects-columns {
@@ -476,5 +480,96 @@ a:hover {
   .projects-column--narrow {
     border-left: none;
   }
+}
 
+.video-pair {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden; /* 处理 1px 像素取整造成的轻微溢出 */
+}
+
+.video-card {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* 横版 16:9 的可用宽度比例 */
+.video-card.landscape {
+  flex: 1.7778 1 0;
+}
+
+/* 竖版 9:16 的可用宽度比例 */
+.video-card.portrait {
+  flex: 0.5625 1 0;
+}
+
+.video-card video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.video-caption {
+  margin: 0.5rem 0 0;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  color: #666666;
+}
+
+@media (max-width: 768px) {
+  .video-pair {
+    flex-direction: column;
+  }
+
+  .video-card.landscape,
+  .video-card.portrait {
+    width: 100%;
+  }
+}
+
+.video-large {
+  width: 50vw;       /* 约半个屏幕宽 */
+  max-width: 900px;  /* 大屏时避免过宽，可自行删除或修改 */
+  margin-top: 1rem;
+}
+
+.video-large video {
+  display: block;
+  width: 100%;
+  height: auto;      /* 保持影片原比例 */
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .video-large {
+    width: 100%;
+  }
+}
+
+.image-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  width: 100%;                 /* 三张图合计占满屏幕宽度 */
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.image-trio img {
+  display: block;
+  width: 100%;
+  height: auto;                 /* 保留 9:16 原比例 */
+}
+
+@media (max-width: 768px) {
+  .image-trio {
+    gap: 0.5rem;
+  }
 }
